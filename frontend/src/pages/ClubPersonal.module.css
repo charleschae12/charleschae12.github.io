@@ -1,0 +1,89 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "image name status"
+    "description description tags"
+    "events email email";
+  gap: 20px;
+  margin-top: 90px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  grid-area: image;
+  width: 144px;
+  height: 144px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+
+.clubName {
+  grid-area: name;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.clubInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.description {
+  grid-area: description;
+  justify-self: center;
+}
+
+.status {
+  grid-area: status;
+  display: grid;
+  grid-template-areas: 'active' 'members';
+  grid-template-rows: 1fr 1fr;
+}
+
+.tags {
+  grid-area: tags;
+}
+
+.events {
+  grid-area: events;
+}
+
+.email {
+  grid-area: email;
+}
+
+/* Add this CSS rule to set a smaller font size for the Active and Members sections */
+.status h3,
+.status p {
+  font-size: 1rem;
+}
+
+/* Adjust the existing subContainer CSS rule to make the container smaller */
+.subContainer {
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
